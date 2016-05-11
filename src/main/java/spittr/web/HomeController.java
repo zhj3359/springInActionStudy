@@ -8,10 +8,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by jhj on 2016-05-10.
  */
 @Controller
+@RequestMapping({"/","/homepage"})
 public class HomeController {
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public String home(){
         return "home";
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public String home2(){
+        return "home2";
     }
 }
